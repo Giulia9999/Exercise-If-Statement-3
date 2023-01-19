@@ -9,16 +9,16 @@ public class Student {
         this.age = studentAge;
     }
 
-    public void guessingAge(int rando){
-        Random random = new Random(rando);
+    public void guessingAge() {
+        Random random = new Random();
         int random_integer = random.nextInt(35);
-        System.out.printf("I generated the random number %d for student %s", rando, name);
+        System.out.printf("I generated the random number %d for student %s %n", random_integer, name);
 
-        if(rando == age){
+        if (random_integer == age) {
             System.out.println("The random number is equal to the student's age");
-        }else if(rando > age){
+        } else if (random_integer > age) {
             System.out.println("The random number is greater than the student's age");
-        }else{
+        } else {
             System.out.println("The random number is lower than the student's age");
         }
     }
